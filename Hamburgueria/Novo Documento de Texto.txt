@@ -1,0 +1,39 @@
+<header>
+        <div class="container">
+            <nav>
+                <h1 id="titulo"><span>Super</span>Burguer</h1>
+                <ul>
+                    <li>
+                        <a href="#">Home</a>
+                        <a href="#">Produtos</a>
+                        <a href="#">Sobre</a>
+                        <a href="#">Fale Conosco</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        
+        <div class="texto">
+            <h1 id="texto">O melhor hamburguer da Cidade</h1>
+        </div>
+
+        <div class="wave wave1"></div>
+        <div class="wave wave2"></div>
+        <div class="wave wave3"></div>
+        <div class="wave wave4"></div>
+    </header>
+    <section class="section1">
+        <div class="gradient"></div>
+        <div class="cortina"></div>
+        <h1 class="produtos">Nossos Produtos</h1>
+        <div class="block">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <div class="produto">
+                <h2>hamburguer</h2>
+            </div>
+            <div class="foto"></div>
+        </div>
+    </section>

@@ -1,0 +1,435 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: green;
+}
+
+header{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 650px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.2)),
+    url("burguer.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container{
+    width: 100%;
+    height: 100px;
+    display: flex;
+}
+
+nav h1{ 
+    color: yellow;
+    font-size: 3vw;
+    font-weight: 700;
+    text-shadow: 5px -5px 20px rgba(255, 255, 255, 0,370)
+}
+
+span{
+    color: red;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 40px;
+}
+
+nav ul li{
+    text-transform: uppercase;
+    margin: 10px 0;
+    float: left;
+    list-style: none;
+}
+
+nav ul li a{
+    position: relative;
+    padding: 10px 0;
+    margin: 0 50px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.4vw;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+nav ul li a::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    left: 0;
+    top: 0;
+    background-color: red;
+    transform-origin: right;
+    transition: all .5s;
+    transform: scaleX(0);
+}
+
+nav ul li a::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    left: 0;
+    top: 0;
+    background-color: red;
+    transform-origin: left;
+    transition: all .5s;
+    transform: scaleX(0);
+
+}nav ul li a::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    left: 0;
+    bottom: 0;
+    background-color: yellow;
+    transform-origin: right;
+    transition: all .5s;
+    transform: scaleX(0);
+}
+
+nav  ul li a:hover::before,
+nav  ul li a:hover::after{
+    transform: scaleX(1);
+}
+
+.texto{
+    position: relative;
+    top: 40px;
+    margin: 0 30%;
+    font-size: 2.7vw;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: animateText 3s infinite;
+}
+
+@keyframes animateText{
+    0%,100%{
+        text-shadow: -5px 5px red;
+    }
+    50%{
+        text-shadow: -5px 5px yellow;
+    }
+}
+
+#texto::after{
+    content: '|';
+    opacity: 1;
+    margin-left: 5px;
+    display: inline-block;
+    animation: blink .7s infinite;
+    }
+
+    @keyframes blink{
+        0%,100%{
+            opacity:1;
+        }
+        50%{
+            opacity:0;
+        }
+    }
+
+header .wave{
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    background-size: 1000px 100px;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+}
+
+header .wave.wave1{
+    background-image: url(wavered.png);
+    animation: animateWave1 30s linear infinite;
+    z-index: 1000;
+    opacity: 1;
+    animation-delay: 0s;
+    bottom: 0;
+}
+
+@keyframes animateWave1{
+    0%{
+        background-position-x: 0px;
+    }
+    100%{
+        background-position-x: 1000px;
+    }
+}
+
+
+header .wave.wave2{
+    animation: animateWave2 15s linear infinite;
+    background-image: url(waveyellow.png);
+    z-index: 999;
+    opacity: 0.7;
+    animation-delay: -5s;
+    bottom: 0px;
+}
+
+@keyframes animateWave2{
+    0%{
+        background-position-x: 0px;
+    }
+    100%{
+        background-position-x: -1000px;
+    }
+}
+
+header .wave.wave3{
+    animation: animateWave3 10s linear infinite;
+    background-image: url(wavered.png);
+    z-index: 998;
+    opacity: 0.4;
+    animation-delay: -10s;
+    bottom: 0px;
+}
+
+@keyframes animateWave3{
+    0%{
+        background-position-x: 0px;
+    }
+    100%{
+        background-position-x: 1000px;
+    }
+}
+
+header .wave.wave4{
+    animation: animateWave4 5s linear infinite;
+    background-image: url(waveyellow.png);
+    z-index: 997;
+    opacity: 0.2;
+    animation-delay: -15s;
+    bottom: 0px;
+}
+
+@keyframes animateWave4{
+    0%{
+        background-position-x: 0px;
+    }
+    100%{
+        background-position-x: -1000px;
+    }
+}
+
+.section1{
+    position: relative;
+    width: 100%;
+    height: 900px;
+    background: url(burguer3.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.gradient{
+    position: relative;
+    width: 100%;
+    height: 130px;
+    left: 0;
+    top: 0;
+    background-image: linear-gradient(to bottom,red, rgba(0,0,0,0));
+}
+
+.cortina{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background: linear-gradient(to bottom,  rgba(0,0,0,0.8), rgba(0,0,0,0.8));
+    clip-path: polygon(55% 0,100% 0, 100% 100%, 42% 100%);
+}
+
+.produtos{
+    position: relative;
+    margin-left: 55%;
+    font-size: 2.5vw;
+    color: rgb(255, 230, 0);
+}
+
+.block{
+    position: relative;
+    width: 35%;
+    height: 200px;
+    left: 55%;
+    box-shadow: 0 20px 50px rgba(73, 73, 73, 0.5);
+    overflow: hidden;
+    padding: 5px 5px;
+    margin-top: 10px;
+}
+
+.block span:nth-child(1){
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, red, yellow);
+    animation: animate1 2s linear infinite;
+}
+@keyframes animate1{
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(100%)
+    }
+}
+
+.block span:nth-child(2){
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, red, yellow);
+    animation: animate2 2s linear infinite;
+    animation-delay: 1s;
+}
+@keyframes animate2{
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(100%)
+    }
+}
+
+
+.block span:nth-child(3){
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to left, red, yellow);
+    animation: animate3 2s linear infinite;
+}
+@keyframes animate3{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-100%)
+    }
+}
+
+
+.block span:nth-child(4){
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to top, red, yellow);
+    animation: animate4 2s linear infinite;
+    animation-delay: 1s;
+}
+@keyframes animate4{
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(-100%)
+    }
+}
+
+.block .produto{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.block .produto h2{
+    text-transform: uppercase;
+    color: rgb(255, 230, 0);
+    font-size: 2vw;
+}
+
+.block .produto::after{
+    content:'';
+    position: absolute;
+    top: 10%;
+    right: 0;
+    width: 2px;
+    height: 80%;
+    background-color: gray;
+}
+
+.block .foto{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    float: right;
+    background-size: cover;
+    background-position: center;
+}
+
+.block #hamburguer{
+    background-image: url(burguer2.jpg);
+}
+
+.block #batatas{
+    background-image: url(batatas.jpg);
+}
+
+.block #sorvetes{
+    background-image: url(sorvetes.jpg);
+}
+
+@media (max-width: 700px){
+    @keyframes animateText{
+        0%,100%{
+            text-shadow: -3px 3px red;
+        }
+        50%{
+            text-shadow: -3px 3px yellow;
+        }
+    }
+    .texto{
+        font-size: 20px;
+        margin: 0 20%;
+    }
+    header{
+        height: 550px;
+    }
+    .cortina{
+        clip-path: polygon(0 0,100% 0, 100% 100%, 0 100%);
+        z-index: 0;
+    }
+    .gradient{
+        z-index: 1;
+    }
+    .produtos{
+        margin-left: 30%;
+        font-size: 25px;
+    }
+    .block{
+        left: 10%;
+        width: 80%;
+    }
+    .block .produto h2{
+        font-size: 25px;
+    }
+}
